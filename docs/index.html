@@ -1,10 +1,59 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta http-equiv="refresh" content="0; url=hello.html">
-    <title>Redirecting...</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jupyter Projects Hub</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Custom style for a subtle hover effect on cards */
+        .hover-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+    </style>
 </head>
-<body>
-    <p>If you are not redirected automatically, follow this <a href="hello.html">link to hello.html</a>.</p>
+<body class="bg-gradient-to-br from-slate-900 to-slate-800 text-gray-100 min-h-screen flex flex-col items-center justify-center p-6">
+
+    <div class="w-full max-w-2xl text-center">
+        <header class="mb-12">
+            <h1 class="text-5xl font-bold text-sky-400 mb-4">Welcome to Jupyter Projects</h1>
+            <p class="text-xl text-slate-300">
+                Navigate to the different HTML pages hosted on this site.
+            </p>
+        </header>
+
+        <main class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <a href="hello.html" class="block p-8 bg-slate-800 rounded-xl shadow-2xl transition-all duration-300 ease-in-out hover-card border border-slate-700 hover:border-sky-500">
+                <h2 class="text-3xl font-semibold text-sky-400 mb-3">Hello Page 1</h2>
+                <p class="text-slate-400">
+                    Click here to view the <code class="bg-slate-700 text-sky-300 px-2 py-1 rounded-md text-sm">hello.html</code> page.
+                </p>
+            </a>
+
+            <a href="hello2.html" class="block p-8 bg-slate-800 rounded-xl shadow-2xl transition-all duration-300 ease-in-out hover-card border border-slate-700 hover:border-sky-500">
+                <h2 class="text-3xl font-semibold text-sky-400 mb-3">Hello Page 2</h2>
+                <p class="text-slate-400">
+                    Click here to view the <code class="bg-slate-700 text-sky-300 px-2 py-1 rounded-md text-sm">hello2.html</code> page.
+                </p>
+            </a>
+        </main>
+
+        <footer class="mt-16 text-center">
+            <p class="text-slate-500 text-sm">
+                &copy; <span id="currentYear"></span> Your Name/Project. All rights reserved.
+            </p>
+        </footer>
+    </div>
+
+    <script>
+        // Set current year in footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
+
 </body>
 </html>
