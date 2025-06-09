@@ -9,17 +9,21 @@
     <style>
         body {
             font-family: 'Inter', sans-serif;
+            background-color: #0F172A; /* A solid dark slate color as a fallback */
         }
         /* Custom style for a subtle hover effect on cards */
+        .hover-card {
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
         .hover-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
         }
     </style>
 </head>
 <body class="bg-gradient-to-br from-slate-900 to-slate-800 text-gray-100 min-h-screen flex flex-col items-center justify-center p-6">
 
-    <div class="w-full max-w-2xl text-center">
+    <div class="w-full max-w-4xl text-center">
         <header class="mb-12">
             <h1 class="text-5xl font-bold text-sky-400 mb-4">Welcome to Jupyter Projects</h1>
             <p class="text-xl text-slate-300">
@@ -28,14 +32,16 @@
         </header>
 
         <main class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <a href="Jupyter_Shapley_Analysis.html" class="block p-8 bg-slate-800 rounded-xl shadow-2xl transition-all duration-300 ease-in-out hover-card border border-slate-700 hover:border-sky-500">
+            <!-- Card 1: Shapley Analysis -->
+            <a href="./Jupyter_Shapley_Analysis.html" class="block p-8 bg-slate-800/50 backdrop-blur-sm rounded-xl shadow-2xl transition-all duration-300 ease-in-out hover-card border border-slate-700 hover:border-sky-500">
                 <h2 class="text-3xl font-semibold text-sky-400 mb-3">Shapley Value Analysis</h2>
                 <p class="text-slate-400">
                     Click here to view the <code class="bg-slate-700 text-sky-300 px-2 py-1 rounded-md text-sm">Jupyter_Shapley_Analysis.html</code> page.
                 </p>
             </a>
 
-            <a href="CatShift_Analysis_Notebook.html" class="block p-8 bg-slate-800 rounded-xl shadow-2xl transition-all duration-300 ease-in-out hover-card border border-slate-700 hover:border-sky-500">
+            <!-- Card 2: CatShift Analysis -->
+            <a href="./CatShift_Analysis_Notebook.html" class="block p-8 bg-slate-800/50 backdrop-blur-sm rounded-xl shadow-2xl transition-all duration-300 ease-in-out hover-card border border-slate-700 hover:border-sky-500">
                 <h2 class="text-3xl font-semibold text-sky-400 mb-3">CatShift Analysis Notebook</h2>
                 <p class="text-slate-400">
                     Click here to view the <code class="bg-slate-700 text-sky-300 px-2 py-1 rounded-md text-sm">CatShift_Analysis_Notebook.html</code> page.
